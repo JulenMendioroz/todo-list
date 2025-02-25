@@ -5,13 +5,13 @@ import { TodoList } from './TodoList'
 import { useTodos } from './useTodos'
 
 function App() {
-  const { todos, addTodo, completeTodo, removeCompletedTodos } = useTodos()
+  const { todos, addTodo, toggleTodo, removeCompletedTodos } = useTodos()
 
   return (
     <>
       <h1 className="title">TODO List</h1>
       <TodoForm onSubmit={addTodo} />
-      <TodoList todos={todos} onCompleteTodo={completeTodo} />
+      <TodoList todos={todos} onToggleTodo={toggleTodo} />
       <Button onClick={removeCompletedTodos}>Remove completed</Button>
     </>
   )

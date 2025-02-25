@@ -32,5 +32,5 @@ export function useTodos(
     setTodos((prev) => prev.filter((todo) => todo.status !== TodoStatus.Completed))
   }
 
-  return { todos, addTodo, completeTodo: toggleTodo, removeCompletedTodos }
+  return { todos, addTodo, toggleTodo, removeCompletedTodos }
 }

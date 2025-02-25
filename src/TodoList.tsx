@@ -1,9 +1,9 @@
 import { Todo, TodoStatus } from './types'
 
-export function TodoList({ todos, onCompleteTodo }: { todos: Todo[]; onCompleteTodo: (index: number) => void }) {
+export function TodoList({ todos, onToggleTodo }: { todos: Todo[]; onToggleTodo: (index: number) => void }) {
   const handleKeyDown = (index: number) => (ev: React.KeyboardEvent<HTMLLIElement>) => {
     if (ev.key === 'Enter') {
-      onCompleteTodo(index)
+      onToggleTodo(index)
     }
   }
 
@@ -12,7 +12,7 @@ export function TodoList({ todos, onCompleteTodo }: { todos: Todo[]; onCompleteT
       {todos.map(({ id, description, status }, index) => (
         <li
           key={id}
-          onClick={() => onCompleteTodo(index)}
+          onClick={() => onToggleTodo(index)}
           tabIndex={0}
           role="button"
           onKeyDown={handleKeyDown(index)}
