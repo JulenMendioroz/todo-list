@@ -1,0 +1,81 @@
+:root {
+  --color-primary-lighter: hsl(187, 72%, 93%);
+  --color-primary-light: hsl(187, 40%, 50%);
+  --color-primary: hsl(173, 100%, 24%);
+  --color-secondary: hsl(33, 100%, 59%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-primary-lighter);
+}
+
+#root {
+  max-width: 60ch;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.title {
+  margin-block-start: 0;
+  color: var(--color-primary);
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-primary-light);
+  color: white;
+  border: 1px solid var(--color-primary);
+}
+
+.input {
+  flex-grow: 1;
+  max-width: 50ch;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 0.5rem;
+}
+
+.todo-list {
+  list-style: none;
+  margin-block: 0;
+  padding-inline-start: 0;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+
+  --clr-todo: var(--color-primary);
+  background-color: white;
+  border: 1px solid var(--clr-todo);
+  border-radius: 0.5rem;
+}
+
+.todo-completed {
+  --clr-todo: var(--color-primary);
+}
+
+.todo-in-progress {
+  --clr-todo: var(--color-secondary);
+}
+
+.todo__status {
+  color: var(--clr-todo);
+}
